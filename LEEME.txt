@@ -1,0 +1,22 @@
+MARTÍNEZ DE AZA & ASOCIADOS — SITIO WEB
+
+ARCHIVOS
+- index.html: contenido y estructura de la página.
+- style.css: diseño visual y adaptación a móviles.
+- script.js: menú móvil, animaciones discretas, navegación activa y manejo de imágenes faltantes.
+- img/: aquí van el logotipo y las fotografías de los cuatro abogados.
+
+CÓMO VER LA PÁGINA
+1. Extrae la carpeta completa.
+2. Añade las imágenes reales a la carpeta img usando los nombres indicados en img/README.txt.
+3. Abre index.html en un navegador para revisar el sitio localmente.
+4. Para publicar el sitio, sube index.html, style.css, script.js y la carpeta img completa al mismo directorio de tu alojamiento web.
+
+IMÁGENES
+Las rutas son relativas al sitio. Si las imágenes están dentro de img/ y conservan los nombres exactos, se mostrarán automáticamente. Si una imagen no está disponible, el diseño usa un respaldo con iniciales.
+
+CONTACTO
+El botón principal abre WhatsApp al número 849-360-2897. Los cuatro teléfonos son enlaces para llamar. Comprueba los números, la dirección y los enlaces antes de publicar la página.
+
+IMPORTANTE
+No se incluyeron fotografías reales porque no venían adjuntas con el HTML. No publiques los retratos de respaldo como si fueran fotos de los abogados: sustituye cada imagen por la fotografía correcta y autorizada.
