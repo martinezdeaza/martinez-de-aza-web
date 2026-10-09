@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#142b45">
+  <meta name="description" content="Martínez De Aza & Asociados. Firma de abogados en Cabarete, Puerto Plata, República Dominicana. Experiencia, compromiso y soluciones jurídicas desde 1999.">
+  <title>Martínez De Aza &amp; Asociados | Firma Jurídica</title>
+  <style>
+:root {
+  --navy: #142b45;
+  --navy-deep: #0d1e31;
+  --navy-soft: #233c57;
+  --gold: #b89b62;
+  --gold-light: #ddc99e;
+  --cream: #f5f2eb;
+  --paper: #fbfaf7;
+  --ink: #1b2937;
+  --muted: #687583;
+  --line: #e5e0d6;
+  --white: #ffffff;
+  --shadow: 0 24px 70px rgba(14, 30, 47, .12);
+  --sans: "Aptos", "Segoe UI", Arial, sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+body.menu-open { overflow: hidden; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+img { max-width: 100%; }
+.container { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+.section { padding: 112px 0; }
+.skip-link { position: fixed; top: 10px; left: 10px; z-index: 1000; padding: 10px 14px; transform: translateY(-150%); background: var(--white); color: var(--navy); border-radius: 4px; }
+.skip-link:focus { transform: translateY(0); }
+
+.site-header { position: sticky; z-index: 100; top: 0; background: rgba(251, 250, 247, .95); border-bottom: 1px solid rgba(20, 43, 69, .08); backdrop-filter: blur(18px); }
+.nav-wrap { min-height: 88px; display: flex; justify-content: space-between; align-items: center; gap: 34px; }
+.brand { display: inline-flex; align-items: center; min-width: 250px; gap: 12px; position: relative; }
+.brand-mark { width: 48px; height: 48px; flex: 0 0 48px; display: grid; place-items: center; border: 1px solid var(--gold); color: var(--gold); font-family: var(--serif); font-size: 14px; letter-spacing: -1px; }
+.brand-image { display: none; width: 48px; height: 48px; object-fit: contain; position: absolute; left: 0; top: 0; background: var(--paper); }
+.brand.has-logo .brand-image { display: block; }
+.brand.has-logo .brand-mark { visibility: hidden; }
+.brand-name { display: flex; flex-direction: column; color: var(--navy); font-family: var(--serif); font-weight: 700; line-height: 1.08; letter-spacing: -.25px; font-size: 18px; }
+.brand-name span { color: var(--gold); font-size: 14px; letter-spacing: 1.2px; margin-top: 4px; font-family: var(--sans); font-weight: 500; text-transform: uppercase; }
+.site-nav { display: flex; align-items: center; gap: clamp(16px, 2.3vw, 30px); }
+.site-nav > a:not(.nav-cta) { font-size: 12px; font-weight: 650; color: #4b5968; transition: color .2s ease; }
+.site-nav > a:not(.nav-cta):hover, .site-nav > a.active { color: var(--gold); }
+.nav-cta { display: inline-flex; align-items: center; gap: 13px; color: var(--white); background: var(--navy); padding: 13px 17px; font-weight: 650; font-size: 12px; transition: background .2s ease, transform .2s ease; }
+.nav-cta:hover { background: var(--navy-soft); transform: translateY(-1px); }
+.nav-cta span { color: var(--gold-light); font-size: 16px; }
+.menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; padding: 11px; cursor: pointer; }
+.menu-toggle span { display: block; height: 2px; margin: 5px 0; background: var(--navy); transition: transform .2s ease, opacity .2s ease; }
+
+.hero { position: relative; isolation: isolate; overflow: hidden; background: var(--navy); color: var(--white); min-height: 680px; display: flex; align-items: center; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: radial-gradient(ellipse at 85% 52%, rgba(184, 155, 98, .17), transparent 39%), linear-gradient(116deg, #11263e 0%, #142b45 55%, #1b344e 100%); }
+.hero-pattern { position: absolute; z-index: -1; inset: 0; opacity: .16; background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px); background-size: 68px 68px; mask-image: linear-gradient(90deg, #000, transparent 75%); }
+.hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 54px; padding-top: 78px; padding-bottom: 100px; }
+.eyebrow { margin: 0 0 22px; color: var(--gold-light); display: flex; align-items: center; gap: 10px; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: 750; }
+.eyebrow > span { display: inline-block; width: 27px; height: 1px; background: var(--gold); }
+.eyebrow-dark { color: #7a6847; }
+.hero h1 { max-width: 660px; margin: 0; font-family: var(--serif); font-size: clamp(43px, 5vw, 66px); font-weight: 400; line-height: 1.08; letter-spacing: -1.7px; }
+.hero h1 em, h2 em { color: var(--gold); font-style: normal; }
+.hero-lead { max-width: 510px; margin: 25px 0 30px; color: #c6d0db; font-size: 15px; line-height: 1.8; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 25px; }
+.button { min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 18px; padding: 14px 20px; font-size: 12px; font-weight: 750; transition: transform .2s ease, background .2s ease; }
+.button:hover { transform: translateY(-2px); }
+.button-gold { color: var(--navy-deep); background: var(--gold-light); }
+.button-gold:hover { background: #ead8b0; }
+.button span { font-size: 17px; }
+.text-link { font-size: 12px; font-weight: 650; color: #e3e8ed; }
+.text-link span { margin-left: 8px; color: var(--gold-light); }
+.hero-proof { margin-top: 48px; display: flex; align-items: center; gap: 18px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.17); max-width: 385px; }
+.proof-number { color: var(--gold-light); font-family: var(--serif); font-size: 31px; letter-spacing: -1px; }
+.hero-proof p { margin: 0; font-size: 11px; line-height: 1.5; color: #bec9d4; }
+.hero-art { min-height: 470px; position: relative; display: grid; place-items: center; }
+.art-orbit { border: 1px solid rgba(221, 201, 158, .22); position: absolute; border-radius: 50%; }
+.art-orbit-one { width: 490px; max-width: 100%; aspect-ratio: 1; }
+.art-orbit-two { width: 390px; max-width: 88%; aspect-ratio: 1; border-style: dashed; }
+.art-card { position: relative; z-index: 1; width: min(390px, 88%); background: linear-gradient(145deg, #fbf8f1, #eee7d8); padding: 20px 23px 17px; box-shadow: 0 32px 70px rgba(0,0,0,.25); color: var(--navy); }
+.art-topline { display: flex; align-items: center; justify-content: space-between; color: #8a7550; font-size: 9px; font-weight: 800; letter-spacing: 2px; }
+.justice-art { display: block; width: 100%; margin: 0 auto; }
+.art-caption { display: flex; align-items: center; justify-content: space-between; gap: 14px; font-size: 9px; font-weight: 750; color: #837353; letter-spacing: 1.2px; text-transform: uppercase; }
+.caption-line { height: 1px; flex: 1; background: #cbbb9a; }
+.floating-seal { position: absolute; z-index: 2; width: 105px; height: 105px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid rgba(221,201,158,.65); border-radius: 50%; bottom: 45px; right: 0; background: var(--navy); color: var(--gold-light); box-shadow: 0 14px 40px rgba(0,0,0,.2); }
+.floating-seal span { font-family: var(--serif); font-size: 34px; line-height: 1; }
+.floating-seal small { font-size: 7px; letter-spacing: 1.2px; margin-top: 5px; }
+.scroll-cue { position: absolute; bottom: 23px; left: max(24px, calc((100% - 1160px) / 2)); display: flex; align-items: center; gap: 12px; color: #b7c2ce; text-transform: uppercase; font-weight: 700; font-size: 9px; letter-spacing: 1.5px; }
+.scroll-cue span { display: inline-block; width: 31px; height: 1px; background: var(--gold); }
+
+.about-section { background: var(--paper); }
+.about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; align-items: start; }
+h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4vw, 48px); letter-spacing: -1px; line-height: 1.15; }
+.section-intro h2 { margin: 0; max-width: 460px; color: var(--navy); }
+.gold-rule { width: 54px; height: 2px; background: var(--gold); margin-top: 30px; }
+.about-copy p { color: var(--muted); font-size: 14px; margin: 0 0 22px; }
+.about-copy p.large-copy { color: #344557; font-family: var(--serif); font-size: 21px; line-height: 1.55; }
+.underlined-link { display: inline-flex; align-items: center; gap: 20px; color: var(--navy); font-size: 12px; font-weight: 750; padding-bottom: 8px; border-bottom: 1px solid var(--gold); margin-top: 8px; }
+.underlined-link span { color: var(--gold); font-size: 17px; transition: transform .2s ease; }
+.underlined-link:hover span { transform: translateX(4px); }
+.values-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 82px; padding: 28px 0; }
+.value-item { display: flex; gap: 16px; align-items: flex-start; }
+.value-icon { color: var(--gold); font-family: var(--serif); font-size: 23px; line-height: 1; padding-top: 3px; }
+.value-item h3 { margin: 0 0 4px; font-family: var(--serif); font-weight: 500; font-size: 17px; color: var(--navy); }
+.value-item p { margin: 0; font-size: 11px; color: var(--muted); }
+
+.section-dark { background: var(--navy-deep); color: var(--white); }
+.mission-section { padding: 0; position: relative; overflow: hidden; }
+.mission-section::before { content: ""; position: absolute; inset: 0; opacity: .18; background: radial-gradient(ellipse at 85% 20%, var(--gold) 0, transparent 45%); pointer-events: none; }
+.mission-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; }
+.mission-card { position: relative; padding: 76px 9% 80px 0; }
+.mission-card + .mission-card { padding-left: 11%; padding-right: 0; border-left: 1px solid rgba(255,255,255,.14); }
+.section-number { color: var(--gold-light); font-size: 10px; font-weight: 750; letter-spacing: 2px; }
+.mission-card h2 { max-width: 390px; font-size: 37px; margin: 21px 0 14px; }
+.mission-card p { max-width: 420px; margin: 0; font-size: 13px; color: #b8c5d2; }
+.mission-card-featured { overflow: hidden; }
+.mission-decoration { position: absolute; bottom: -75px; right: 0; color: rgba(221,201,158,.08); font-family: var(--serif); font-size: 180px; letter-spacing: -15px; line-height: 1; pointer-events: none; }
+
+.team-section { background: #fff; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 50px; margin-bottom: 46px; }
+.section-heading h2 { margin: 0; color: var(--navy); max-width: 680px; }
+.section-heading > p { max-width: 340px; margin: 0 0 6px; font-size: 13px; color: var(--muted); }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.team-card { min-width: 0; background: var(--paper); border: 1px solid #eee9df; transition: transform .25s ease, box-shadow .25s ease; }
+.team-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(20,43,69,.1); }
+.portrait { position: relative; overflow: hidden; aspect-ratio: 4 / 4.4; background: linear-gradient(150deg, #e3ded2, #c6d0d5); }
+.portrait::after { content: ""; position: absolute; inset: 48% 0 0; background: linear-gradient(transparent, rgba(14,30,47,.17)); pointer-events: none; }
+.portrait:nth-child(odd) { background-color: #e4ddd0; }
+.portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; z-index: 1; }
+.portrait img.image-missing { display: none; }
+.portrait-fallback { position: absolute; inset: 0; display: grid; place-items: center; color: rgba(20,43,69,.8); font-family: var(--serif); font-size: 54px; letter-spacing: -2px; background: radial-gradient(circle at 50% 28%, rgba(255,255,255,.55), transparent 22%), linear-gradient(155deg, #e8e2d5, #bdc8cb); }
+.portrait-fallback::before { content: ""; position: absolute; width: 108px; height: 108px; top: 19%; border: 1px solid rgba(184,155,98,.7); border-radius: 50%; }
+.portrait-fallback::after { content: ""; position: absolute; width: 148px; height: 140px; bottom: -55px; border: 1px solid rgba(184,155,98,.65); border-radius: 50% 50% 0 0; }
+.team-info { padding: 22px 18px 24px; }
+.team-role { color: #9b8052; font-size: 9px; letter-spacing: 1.3px; text-transform: uppercase; font-weight: 800; }
+.team-info h3 { margin: 8px 0 9px; color: var(--navy); font-size: 17px; line-height: 1.3; font-family: var(--serif); font-weight: 600; }
+.team-info p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+
+.practice-section { background: var(--navy); color: var(--white); }
+.practice-section .section-heading { margin-bottom: 48px; }
+.practice-section .section-heading h2 { color: var(--white); }
+.practice-section .section-heading > p { color: #c3ced9; }
+.practice-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.17); border-left: 1px solid rgba(255,255,255,.17); }
+.practice-card { position: relative; min-height: 250px; padding: 28px 24px; border-right: 1px solid rgba(255,255,255,.17); border-bottom: 1px solid rgba(255,255,255,.17); transition: background .2s ease; }
+.practice-card:hover { background: rgba(255,255,255,.045); }
+.practice-num { position: absolute; top: 25px; right: 22px; font-size: 10px; color: #8392a3; letter-spacing: 1px; }
+.practice-symbol { color: var(--gold-light); font-family: var(--serif); font-size: 31px; height: 49px; margin-bottom: 19px; }
+.practice-card h3 { max-width: 210px; margin: 0 0 10px; color: #f9f7f1; font-family: var(--serif); font-size: 20px; font-weight: 500; line-height: 1.3; }
+.practice-card p { margin: 0; max-width: 230px; color: #b9c6d2; font-size: 11px; line-height: 1.75; }
+.practice-arrow { position: absolute; bottom: 23px; right: 22px; color: var(--gold-light); font-size: 17px; }
+.practice-card-contact { background: #f0e8d8; color: var(--navy); }
+.practice-card-contact .eyebrow { margin-bottom: 17px; color: #8b744c; font-size: 8px; letter-spacing: 1px; }
+.practice-card-contact .eyebrow > span { width: 18px; }
+.practice-card-contact h3 { color: var(--navy); font-size: 25px; }
+.practice-card-contact p { color: #5a6875; }
+.practice-card-contact .underlined-link { margin-top: 20px; }
+
+.contact-section { position: relative; overflow: hidden; background: #eee9df; padding: 105px 0; }
+.contact-backdrop { position: absolute; inset: 0; pointer-events: none; opacity: .36; background: radial-gradient(ellipse at 0 100%, #d4c19c, transparent 50%), linear-gradient(130deg, transparent 45%, rgba(255,255,255,.8)); }
+.contact-grid { position: relative; display: grid; grid-template-columns: 1fr .85fr; gap: 105px; align-items: center; }
+.contact-copy h2 { color: var(--navy); font-size: clamp(38px, 4.5vw, 55px); max-width: 480px; margin: 0 0 20px; }
+.contact-copy > p:not(.eyebrow) { color: #64717c; font-size: 14px; max-width: 430px; margin: 0 0 28px; }
+.contact-panel { background: var(--paper); box-shadow: var(--shadow); padding: 34px 35px 26px; }
+.contact-detail { display: flex; gap: 18px; padding-bottom: 26px; margin-bottom: 24px; border-bottom: 1px solid var(--line); }
+.detail-icon { flex: 0 0 40px; height: 40px; display: grid; place-items: center; border: 1px solid #d8c59e; color: #9b8052; font-size: 22px; }
+.detail-label { display: block; margin-bottom: 7px; color: #9b8052; font-size: 9px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; }
+.contact-detail p, .contact-detail a { display: block; margin: 0; color: #455463; font-size: 12px; line-height: 1.9; }
+.contact-detail a:hover { color: #987c4b; }
+.whatsapp-contacts { border-top: 1px solid var(--line); margin-top: 2px; padding-top: 22px; }
+.whatsapp-contacts .detail-label { margin-bottom: 12px; }
+.whatsapp-note { color: var(--muted); font-size: 11px; line-height: 1.65; margin: 0 0 14px; }
+.whatsapp-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.whatsapp-link { display: flex !important; align-items: center; justify-content: space-between; gap: 8px; min-width: 0; padding: 12px 11px; border: 1px solid #d8c59e; color: var(--navy) !important; font-size: 11px !important; font-weight: 750; line-height: 1.4 !important; overflow-wrap: anywhere; transition: background .2s ease, border-color .2s ease; }
+.whatsapp-link:hover { background: #f3eddf; border-color: var(--gold); }
+.whatsapp-link span { flex: 0 0 auto; color: #8b744c; font-size: 15px; }
+.map-link { display: flex; justify-content: space-between; gap: 10px; color: var(--navy); font-size: 11px; font-weight: 750; }
+.map-link span { color: var(--gold); font-size: 16px; }
+
+.site-footer { color: #c0ccd6; background: #0a192a; padding: 34px 0 17px; }
+.footer-main { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,.13); }
+.brand-footer { min-width: 0; }
+.brand-footer .brand-name { color: #f5f3ee; font-size: 16px; }
+.brand-footer .brand-name span { color: var(--gold-light); font-size: 11px; }
+.brand-footer .brand-mark { width: 42px; height: 42px; flex-basis: 42px; }
+.brand-footer .brand-image { width: 42px; height: 42px; }
+.footer-main > p { font-size: 11px; margin: 0; color: #93a1af; }
+.back-top { color: var(--gold-light); font-size: 11px; font-weight: 700; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 18px; padding-top: 20px; color: #7f8d9b; font-size: 9px; }
+.legal-note { width: min(1160px, calc(100% - 48px)); margin: 18px auto 0; font-size: 9px; color: #788795; }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .65s ease, transform .65s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 1000px) {
+  .nav-wrap { gap: 20px; }
+  .brand { min-width: 220px; }
+  .brand-name { font-size: 16px; }
+  .brand-name span { font-size: 12px; }
+  .site-nav { gap: 14px; }
+  .site-nav > a:not(.nav-cta) { font-size: 11px; }
+  .nav-cta { padding: 12px; gap: 8px; }
+  .hero-grid { gap: 25px; }
+  .hero-art { min-height: 400px; }
+  .about-grid { gap: 60px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .portrait { aspect-ratio: 5 / 4; }
+  .practice-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { gap: 55px; }
+}
+@media (max-width: 900px) {
+  .nav-wrap { min-height: 76px; }
+  .brand { min-width: 0; gap: 10px; }
+  .brand-mark, .brand-image { width: 42px; height: 42px; }
+  .brand-mark { flex-basis: 42px; }
+  .brand-name { font-size: 15px; }
+  .brand-name span { font-size: 10px; letter-spacing: 1px; }
+  .menu-toggle { display: block; position: relative; z-index: 2; flex: 0 0 44px; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .site-nav { display: none; position: fixed; inset: 76px 0 0; z-index: 1; min-height: 0; padding: 24px 26px max(28px, env(safe-area-inset-bottom)); background: var(--paper); flex-direction: column; align-items: stretch; gap: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior-y: contain; border-top: 1px solid var(--line); box-shadow: 0 18px 32px rgba(13, 30, 49, .12); }
+  .site-nav.is-open { display: flex; }
+  .site-nav > a:not(.nav-cta) { display: flex; align-items: center; min-height: 54px; width: 100%; font-size: 15px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+  .site-nav .nav-cta { width: 100%; min-height: 52px; margin-top: 24px; justify-content: space-between; padding: 16px; font-size: 13px; }
+}
+@media (max-width: 760px) {
+  .container { width: min(100% - 36px, 560px); }
+  .section { padding: 76px 0; }
+  .nav-wrap { min-height: 76px; }
+  .brand { min-width: 0; gap: 10px; }
+  .brand-mark, .brand-image { width: 42px; height: 42px; }
+  .brand-mark { flex-basis: 42px; }
+  .brand-name { font-size: 15px; }
+  .brand-name span { font-size: 10px; letter-spacing: 1px; }
+  .menu-toggle { display: block; position: relative; z-index: 2; flex: 0 0 44px; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .site-nav { display: none; position: fixed; inset: 76px 0 0; z-index: 1; min-height: 0; padding: 24px 26px max(28px, env(safe-area-inset-bottom)); background: var(--paper); flex-direction: column; align-items: stretch; gap: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior-y: contain; border-top: 1px solid var(--line); box-shadow: 0 18px 32px rgba(13, 30, 49, .12); }
+  .site-nav.is-open { display: flex; }
+  .site-nav > a:not(.nav-cta) { display: flex; align-items: center; min-height: 54px; width: 100%; font-size: 15px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+  .site-nav .nav-cta { width: 100%; min-height: 52px; margin-top: 24px; justify-content: space-between; padding: 16px; font-size: 13px; }
+  .hero { min-height: auto; }
+  .hero-grid { grid-template-columns: 1fr; gap: 35px; padding-top: 65px; padding-bottom: 92px; }
+  .hero h1 { font-size: clamp(41px, 11vw, 57px); letter-spacing: -1.2px; }
+  .hero-lead { font-size: 14px; }
+  .hero-proof { margin-top: 33px; }
+  .hero-art { min-height: 350px; margin: 0 -8px; }
+  .art-card { width: min(320px, 78%); padding: 15px 17px 12px; }
+  .art-orbit-one { width: 350px; }
+  .art-orbit-two { width: 285px; }
+  .floating-seal { width: 82px; height: 82px; bottom: 17px; right: 7%; }
+  .floating-seal span { font-size: 27px; }
+  .floating-seal small { font-size: 6px; }
+  .scroll-cue { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 28px; }
+  .section-intro h2 { max-width: 520px; }
+  .about-copy p.large-copy { font-size: 20px; }
+  .values-strip { grid-template-columns: 1fr; gap: 21px; margin-top: 45px; padding: 25px 0; }
+  .value-item h3 { font-size: 16px; }
+  .mission-grid { grid-template-columns: 1fr; }
+  .mission-card { padding: 54px 0; }
+  .mission-card + .mission-card { padding: 54px 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.14); }
+  .mission-card h2 { font-size: 33px; }
+  .mission-decoration { font-size: 130px; bottom: -44px; }
+  .section-heading { display: block; margin-bottom: 34px; }
+  .section-heading > p { margin-top: 20px; }
+  .team-grid { gap: 14px; }
+  .team-info { padding: 17px 13px 19px; }
+  .team-info h3 { font-size: 16px; }
+  .portrait { aspect-ratio: 4 / 4.2; }
+  .practice-grid { grid-template-columns: 1fr 1fr; }
+  .practice-card { min-height: 245px; padding: 23px 16px; }
+  .practice-num { top: 20px; right: 15px; }
+  .practice-symbol { margin-bottom: 14px; }
+  .practice-card h3 { font-size: 18px; }
+  .practice-card p { font-size: 10px; }
+  .practice-card-contact h3 { font-size: 22px; }
+  .contact-section { padding: 76px 0; }
+  .contact-grid { grid-template-columns: 1fr; gap: 37px; }
+  .contact-panel { padding: 25px 21px 22px; }
+  .whatsapp-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-main { align-items: flex-start; flex-wrap: wrap; }
+  .footer-main > p { order: 3; width: 100%; }
+  .footer-bottom { flex-direction: column; gap: 6px; }
+  .legal-note { width: min(100% - 36px, 560px); }
+}
+@media (max-width: 390px) {
+  .container { width: calc(100% - 28px); }
+  .brand-name { font-size: 13px; }
+  .brand-name span { font-size: 9px; }
+  .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
+  .team-grid { grid-template-columns: 1fr; }
+  .portrait { aspect-ratio: 5 / 3.5; }
+  .team-info h3 { font-size: 18px; }
+  .practice-grid { grid-template-columns: 1fr; }
+  .practice-card { min-height: 215px; padding: 25px; }
+  .practice-card h3 { font-size: 21px; }
+  .whatsapp-list { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+    /* Preview canvas follows the host appearance while keeping the site palette explicit. */
+    body { background-color: light-dark(#fbfaf7, #0d1e31); border-radius: 0; }
+  
+    .portrait-fallback { color: #31475c; }
+    </style>
+
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Martínez De Aza & Asociados, inicio">
+        <span class="brand-mark" aria-hidden="true">MDA</span>
+        <img class="brand-image" src="img/logo.png" alt="Logo de Martínez De Aza & Asociados">
+        <span class="brand-name">Martínez De Aza <span>&amp; Asociados</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="site-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#firma">La firma</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+        <a class="nav-cta" href="#whatsapp-contactos">Solicitar consulta <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Firma jurídica · Cabarete, Puerto Plata</p>
+          <h1 id="hero-title">Soluciones jurídicas con <em>experiencia</em> y compromiso.</h1>
+          <p class="hero-lead">Acompañamiento legal responsable para proteger sus derechos, atender sus necesidades y orientar sus decisiones.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#whatsapp-contactos">Solicitar una consulta <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#firma">Conozca nuestra firma <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-number">1999</div>
+            <p>Experiencia y dedicación<br>al servicio de nuestros clientes</p>
+          </div>
+        </div>
+
+        <div class="hero-art reveal" aria-label="Ilustración decorativa de columnas clásicas y balanza de la justicia">
+          <div class="art-orbit art-orbit-one"></div>
+          <div class="art-orbit art-orbit-two"></div>
+          <div class="art-card">
+            <div class="art-topline"><span>EST.</span><span>1999</span></div>
+            <svg class="justice-art" viewBox="0 0 460 450" role="img" aria-label="Ilustración de una balanza de la justicia frente a columnas clásicas">
+              <defs>
+                <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dfc99a"/><stop offset="1" stop-color="#9e7f4c"/></linearGradient>
+                <linearGradient id="pillarShade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ebe3d5"/><stop offset=".5" stop-color="#fffdf8"/><stop offset="1" stop-color="#d6c7af"/></linearGradient>
+              </defs>
+              <circle cx="230" cy="215" r="166" fill="none" stroke="#d7c7a9" stroke-width="1" stroke-dasharray="3 9"/>
+              <path d="M77 350H383M95 365H365M115 381H345" fill="none" stroke="url(#goldLine)" stroke-width="3" stroke-linecap="round"/>
+              <g fill="url(#pillarShade)" stroke="#c9b895" stroke-width="1.5">
+                <path d="M91 348V204h37v144zM145 348V204h37v144zM199 348V204h37v144zM253 348V204h37v144zM307 348V204h37v144z"/>
+                <path d="M81 199h57v-12H81zM135 199h57v-12h-57zM189 199h57v-12h-57zM243 199h57v-12h-57zM297 199h57v-12h-57z"/>
+                <path d="M72 184h301v-18H72zM62 161h321v-11H62zM53 145h339v-10H53z"/>
+                <path d="M84 204h49v-6H84zM138 204h49v-6h-49zM192 204h49v-6h-49zM246 204h49v-6h-49zM300 204h49v-6h-49z"/>
+              </g>
+              <g fill="none" stroke="url(#goldLine)" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke-width="4" d="M230 70v178M183 99h94M230 70l-9 13m9-13 9 13"/>
+                <path stroke-width="3" d="M185 99l-44 74m44-74 44 74M275 99l-44 74m44-74 44 74"/>
+                <path stroke-width="3" d="M123 171q18 35 62 0M215 171q18 35 62 0M297 171q18 35 62 0" transform="translate(-18 0)"/>
+                <path stroke-width="4" d="M164 184q20 13 41 0M255 184q20 13 41 0"/>
+                <path stroke-width="3" d="M230 248l-24 24h48zM194 282h72M209 298h42"/>
+              </g>
+              <g fill="#b89b62"><circle cx="230" cy="70" r="5"/><circle cx="183" cy="99" r="4"/><circle cx="277" cy="99" r="4"/></g>
+            </svg>
+            <div class="art-caption"><span>Ética</span><span class="caption-line"></span><span>Responsabilidad</span></div>
+          </div>
+          <div class="floating-seal" aria-hidden="true"><span>MD</span><small>&amp; ASOCIADOS</small></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#firma" aria-label="Desplazarse a la sección La firma"><span></span> Descubra nuestra firma</a>
+    </section>
+
+    <section class="section about-section" id="firma">
+      <div class="container about-grid">
+        <div class="section-intro reveal">
+          <p class="eyebrow eyebrow-dark"><span></span> Nuestra firma</p>
+          <h2>La confianza se construye con <em>principios.</em></h2>
+          <div class="gold-rule"></div>
+        </div>
+        <div class="about-copy reveal">
+          <p class="large-copy">Somos una firma jurídica establecida en Cabarete, Puerto Plata, dedicada a brindar asesoría y representación legal con profesionalismo, ética y compromiso.</p>
+          <p>Desde 1999, acompañamos a personas, familias y empresas en la atención de sus asuntos legales, procurando ofrecer orientación clara y soluciones jurídicas responsables.</p>
+          <a class="underlined-link" href="#equipo">Conozca a nuestro equipo <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="container values-strip reveal">
+        <div class="value-item"><span class="value-icon" aria-hidden="true">01</span><div><h3>Ética profesional</h3><p>Actuamos con integridad y responsabilidad.</p></div></div>
+        <div class="value-item"><span class="value-icon" aria-hidden="true">02</span><div><h3>Compromiso</h3><p>Atención dedicada a cada asunto legal.</p></div></div>
+        <div class="value-item"><span class="value-icon" aria-hidden="true">03</span><div><h3>Confidencialidad</h3><p>Respeto por la información de nuestros clientes.</p></div></div>
+      </div>
+    </section>
+
+    <section class="mission-section section-dark">
+      <div class="container mission-grid">
+        <article class="mission-card reveal">
+          <span class="section-number">01 / MISIÓN</span>
+          <h2>Servir con responsabilidad.</h2>
+          <p>Brindar asesoría y representación legal con altos estándares de profesionalismo, ética y responsabilidad.</p>
+        </article>
+        <article class="mission-card mission-card-featured reveal">
+          <span class="section-number">02 / VISIÓN</span>
+          <h2>Ser una firma de referencia.</h2>
+          <p>Consolidarnos como una firma jurídica de referencia en la República Dominicana.</p>
+          <span class="mission-decoration" aria-hidden="true">MDA</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section team-section" id="equipo">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow eyebrow-dark"><span></span> Nuestro equipo</p><h2>Profesionales a su <em>servicio.</em></h2></div>
+          <p>Un equipo jurídico con áreas de práctica diversas y una visión basada en la ética y el compromiso.</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card reveal">
+            <div class="portrait"><div class="portrait-fallback" aria-hidden="true">RM</div></div>
+            <div class="team-info"><span class="team-role">Socio propietario</span><h3>Lic. Rafael A. Martínez Candelario</h3><p>Derecho inmobiliario, tierras, terrenos y jurisdicción inmobiliaria.</p></div>
+          </article>
+          <article class="team-card reveal">
+            <div class="portrait"><div class="portrait-fallback" aria-hidden="true">JD</div></div>
+            <div class="team-info"><span class="team-role">Socio propietario</span><h3>Lic. Jesús M. De Aza Alvarado</h3><p>Derecho civil, representación judicial y solución de conflictos.</p></div>
+          </article>
+          <article class="team-card reveal">
+            <div class="portrait"><div class="portrait-fallback" aria-hidden="true">JM</div></div>
+            <div class="team-info"><span class="team-role">Socio propietario</span><h3>Lic. José Morales Martínez</h3><p>Derecho penal, litigación y defensa jurídica.</p></div>
+          </article>
+          <article class="team-card reveal">
+            <div class="portrait"><div class="portrait-fallback" aria-hidden="true">YA</div></div>
+            <div class="team-info"><span class="team-role">Socia propietaria</span><h3>Licda. Yolenny María De Aza Sena</h3><p>Derecho civil, asesoría legal y representación de clientes.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="practice-section section" id="servicios">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow"><span></span> Áreas de práctica</p><h2>Orientación legal para asuntos <em>importantes.</em></h2></div>
+          <p>Conozca las principales áreas en las que nuestra firma brinda asesoría y representación.</p>
+        </div>
+        <div class="practice-grid">
+          <article class="practice-card reveal"><span class="practice-num">01</span><div class="practice-symbol" aria-hidden="true">§</div><h3>Derecho civil</h3><p>Asesoría y representación en asuntos de naturaleza civil.</p><span class="practice-arrow" aria-hidden="true">↗</span></article>
+          <article class="practice-card reveal"><span class="practice-num">02</span><div class="practice-symbol" aria-hidden="true">⚖</div><h3>Derecho penal</h3><p>Orientación y defensa jurídica en asuntos penales.</p><span class="practice-arrow" aria-hidden="true">↗</span></article>
+          <article class="practice-card reveal"><span class="practice-num">03</span><div class="practice-symbol" aria-hidden="true">⌂</div><h3>Derecho inmobiliario</h3><p>Asuntos relacionados con inmuebles, tierras y terrenos.</p><span class="practice-arrow" aria-hidden="true">↗</span></article>
+          <article class="practice-card reveal"><span class="practice-num">04</span><div class="practice-symbol" aria-hidden="true">◇</div><h3>Jurisdicción inmobiliaria</h3><p>Orientación en procesos vinculados a la jurisdicción inmobiliaria.</p><span class="practice-arrow" aria-hidden="true">↗</span></article>
+          <article class="practice-card reveal"><span class="practice-num">05</span><div class="practice-symbol" aria-hidden="true">⌘</div><h3>Derecho comercial</h3><p>Asistencia jurídica para asuntos comerciales.</p><span class="practice-arrow" aria-hidden="true">↗</span></article>
+          <article class="practice-card reveal"><span class="practice-num">06</span><div class="practice-symbol" aria-hidden="true">♡</div><h3>Derecho de familia</h3><p>Orientación legal para asuntos del ámbito familiar.</p><span class="practice-arrow" aria-hidden="true">↗</span></article>
+          <article class="practice-card reveal"><span class="practice-num">07</span><div class="practice-symbol" aria-hidden="true">⚖</div><h3>Litigios</h3><p>Representación y acompañamiento en procesos judiciales.</p><span class="practice-arrow" aria-hidden="true">↗</span></article>
+          <article class="practice-card practice-card-contact reveal"><p class="eyebrow"><span></span> ¿Necesita orientación?</p><h3>Conversemos sobre su caso.</h3><p>Comuníquese con la firma para coordinar una consulta.</p><a href="#whatsapp-contactos" class="underlined-link">Contáctenos <span aria-hidden="true">→</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="contact-backdrop" aria-hidden="true"></div>
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow"><span></span> Hablemos</p>
+          <h2>El primer paso es una <em>conversación.</em></h2>
+          <p>Comuníquese con nosotros para solicitar información o coordinar una consulta jurídica.</p>
+          <a class="button button-gold" href="#whatsapp-contactos">Elegir un WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="contact-panel reveal">
+          <div class="contact-detail"><span class="detail-icon" aria-hidden="true">⌖</span><div><span class="detail-label">Dirección</span><p>Plaza Novus Mare,<br>Cabarete, Puerto Plata,<br>República Dominicana.</p></div></div>
+          <div class="contact-detail"><span class="detail-icon" aria-hidden="true">☎</span><div><span class="detail-label">Teléfonos</span><a href="tel:+18493602897">849-360-2897</a><a href="tel:+18099622696">809-962-2696</a><a href="tel:+18099830525">809-983-0525</a><a href="tel:+18098730992">809-873-0992</a></div></div>
+          <div class="whatsapp-contacts" id="whatsapp-contactos"><span class="detail-label">Solicitar consulta por WhatsApp</span><p class="whatsapp-note">Elija uno de los números. El mismo mensaje aparecerá preparado en WhatsApp; puede probar con otro contacto si no recibe respuesta.</p><div class="whatsapp-list"><a class="whatsapp-link" href="https://wa.me/18493602897?text=Hola%2C%20deseo%20solicitar%20una%20consulta%20jur%C3%ADdica%20con%20Mart%C3%ADnez%20De%20Aza%20%26%20Asociados.%20Por%20favor%2C%20ind%C3%ADqueme%20c%C3%B3mo%20coordinarla." target="_blank" rel="noopener noreferrer">849-360-2897 <span aria-hidden="true">↗</span></a><a class="whatsapp-link" href="https://wa.me/18099622696?text=Hola%2C%20deseo%20solicitar%20una%20consulta%20jur%C3%ADdica%20con%20Mart%C3%ADnez%20De%20Aza%20%26%20Asociados.%20Por%20favor%2C%20ind%C3%ADqueme%20c%C3%B3mo%20coordinarla." target="_blank" rel="noopener noreferrer">809-962-2696 <span aria-hidden="true">↗</span></a><a class="whatsapp-link" href="https://wa.me/18099830525?text=Hola%2C%20deseo%20solicitar%20una%20consulta%20jur%C3%ADdica%20con%20Mart%C3%ADnez%20De%20Aza%20%26%20Asociados.%20Por%20favor%2C%20ind%C3%ADqueme%20c%C3%B3mo%20coordinarla." target="_blank" rel="noopener noreferrer">809-983-0525 <span aria-hidden="true">↗</span></a><a class="whatsapp-link" href="https://wa.me/18098730992?text=Hola%2C%20deseo%20solicitar%20una%20consulta%20jur%C3%ADdica%20con%20Mart%C3%ADnez%20De%20Aza%20%26%20Asociados.%20Por%20favor%2C%20ind%C3%ADqueme%20c%C3%B3mo%20coordinarla." target="_blank" rel="noopener noreferrer">809-873-0992 <span aria-hidden="true">↗</span></a></div></div>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Plaza+Novus+Mare+Cabarete+Puerto+Plata+Republica+Dominicana" target="_blank" rel="noopener noreferrer">Buscar ubicación en Google Maps <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand brand-footer" href="#inicio" aria-label="Volver al inicio">
+        <span class="brand-mark" aria-hidden="true">MDA</span>
+        <span class="brand-name">Martínez De Aza <span>&amp; Asociados</span></span>
+      </a>
+      <p>Experiencia, compromiso y soluciones jurídicas desde 1999.</p>
+      <a href="#inicio" class="back-top">Volver arriba ↑</a>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year">2026</span> Martínez De Aza &amp; Asociados. Todos los derechos reservados.</span><span>Cabarete · Puerto Plata · República Dominicana</span></div>
+    <p class="legal-note">La información de este sitio es general y no constituye asesoría jurídica para un caso particular.</p>
+  </footer>
+  <script>
+(function () {
+  'use strict';
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  const header = document.querySelector('.site-header');
+
+  function closeMenu() {
+    if (!menuToggle || !nav) return;
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Abrir menú');
+    nav.classList.remove('is-open');
+    document.body.classList.remove('menu-open');
+  }
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function () {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
+      nav.classList.toggle('is-open', !isOpen);
+      document.body.classList.toggle('menu-open', !isOpen);
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (menuToggle.getAttribute('aria-expanded') !== 'true') return;
+      if (nav.contains(event.target) || menuToggle.contains(event.target)) return;
+      closeMenu();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+        menuToggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 900) closeMenu();
+    });
+  }
+
+  // If the client has not added a photo yet, hide the broken image and keep its designed fallback.
+  document.querySelectorAll('img').forEach(function (image) {
+    image.addEventListener('error', function () {
+      image.classList.add('image-missing');
+      const brand = image.closest('.brand');
+      if (brand && image.classList.contains('brand-image')) brand.classList.remove('has-logo');
+    });
+    image.addEventListener('load', function () {
+      if (image.classList.contains('brand-image')) {
+        const brand = image.closest('.brand');
+        if (brand) brand.classList.add('has-logo');
+      }
+    });
+    if (image.complete && image.naturalWidth > 0 && image.classList.contains('brand-image')) {
+      const brand = image.closest('.brand');
+      if (brand) brand.classList.add('has-logo');
+    }
+  });
+
+  const year = document.getElementById('current-year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  const revealItems = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(function (entries, currentObserver) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          currentObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+    revealItems.forEach(function (item) { observer.observe(item); });
+  } else {
+    revealItems.forEach(function (item) { item.classList.add('is-visible'); });
+  }
+
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+  if ('IntersectionObserver' in window && sections.length && navLinks.length) {
+    const sectionObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (link) {
+          const active = link.getAttribute('href') === '#' + entry.target.id;
+          if (active) link.classList.add('active');
+          else link.classList.remove('active');
+        });
+      });
+    }, { rootMargin: '-35% 0px -55% 0px' });
+    sections.forEach(function (section) { sectionObserver.observe(section); });
+  }
+
+  // Keep the sticky header available for fragment navigation on all screen sizes.
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      const id = link.getAttribute('href');
+      if (!id || id === '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      if (event.defaultPrevented) return;
+      target.style.scrollMarginTop = (header ? header.offsetHeight + 12 : 92) + 'px';
+    });
+  });
+})();
+
+  </script>
+</body>
+</html>
